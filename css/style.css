@@ -290,7 +290,7 @@ input:focus, button:focus {
     position: relative;
     color: #51296f;
     font-size: 16px;
-    margin-bottom: 10px;
+    margin-bottom: 12px;
 }
 
 .dropdown-items > ul > li > a:hover {
