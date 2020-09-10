@@ -1,0 +1,341 @@
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../fonts/Montserrat-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../fonts/Montserrat-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    font-size: 0.875em;
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    font-family: Montserrat, sans-serif;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+input:focus, button:focus {
+    outline: 1px solid #f9b233;
+    -moz-outline-radius: 5px;
+}
+
+.search-form {
+    /*display: table;*/
+}
+
+.search-form input {
+    height: 40px;
+    font-size: 14px;
+    border-radius: 5px;
+    border: 0;
+    box-sizing: border-box;
+}
+.search-form input[type='text'] {
+    width: 100%;
+}
+
+.search-form span {
+    display: inline-block;
+    height: 40px;
+    background-color: white;
+    margin-right: 5px;
+    border-radius: 5px;
+    padding-left: 35px;
+    position: relative;
+    box-sizing: border-box;
+    /*width: 100%;*/
+}
+
+.search-form span::before {
+    content: "";
+    width: 15px;
+    height: 20px;
+    position: absolute;
+    left: 12px;
+    top: 10px;
+    background-repeat: no-repeat;
+}
+
+.search-form input::-moz-placeholder {
+    color: #dcd4e2;
+}
+
+.search-form .search-input  {
+    width: 100%;
+    max-width: 550px;
+}
+
+.search-form .search-input::before  {
+    background-image: url("../img/magnifier.png");
+}
+
+.search-form .location-input  {
+    width: 100%;
+    max-width: 270px;
+}
+
+.search-form .location-input::before  {
+    background-image: url("../img/pointer.png");
+}
+
+.search-form .search-button {
+    background-color: #f9b233;
+    text-transform: uppercase;
+    color: #51296f;
+    font-family: Montserrat, sans-serif;
+    font-weight: bold;
+    min-width: 90px;
+    transition: 0.5s;
+}
+
+.search-form .search-button:hover {
+    background-color: #e4a32f;
+    cursor: pointer;
+}
+
+.page-header {
+    background-color: #51296f;
+}
+
+.header-container {
+    max-width: 930px;
+    margin: 0 auto;
+    padding: 10px 0 20px;
+    box-sizing: border-box;
+}
+
+.header-top {
+    display: table;
+    position: relative;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.logo {
+    display: table-cell;
+    min-width: 180px;
+    height: 40px;
+    background-color: #633f7e;
+}
+
+.group {
+    display: table;
+    width: 100%;
+    max-width: 720px;
+    min-height: 40px;
+}
+
+.menu-horizontal {
+    display: table-cell;
+    vertical-align: middle;
+}
+.menu-horizontal > ul > li {
+    display: table-cell;
+    vertical-align: middle;
+    white-space: nowrap;
+}
+
+.menu-horizontal > ul > li > a {
+    display: block;
+    font-size: 16px;
+    color: white;
+    padding: 3px 15px;
+}
+
+.menu-horizontal > ul > li:not(:last-child) {
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.main-navigation {
+    padding-left: 45px;
+}
+
+.main-navigation ul li button {
+    background: none;
+    border: none;
+    padding: 0 15px;
+    cursor: pointer;
+}
+
+.main-navigation > ul > li > button:hover > span{
+    color: #ffd282;
+}
+
+.main-navigation > ul button > span {
+    color: white;
+    font-size: 38px;
+    line-height: 0;
+    font-family: Montserrat, sans-serif;
+    transition: 0.5s;
+}
+
+.main-navigation > ul > li > a:hover {
+    color: #ffd282;
+}
+
+.member-navigation > ul > li > a.active {
+    color: #f9b233;
+    font-weight: bold;
+}
+
+.member-navigation {
+    text-align: right;
+}
+
+.member-navigation > ul{
+    margin-left: auto;
+    display: table;
+}
+
+.member-navigation > ul > li > a.basket  {
+    position: relative;
+    width: 20px;
+    height: 15px;
+}
+
+.member-navigation > ul > li > a.basket span.basket-goods {
+    display: none;
+    position: absolute;
+    top: -3px;
+    right: 2px;
+    color: white;
+    font-size: 10px;
+    background-color: #d03d95;
+    border-radius: 40%;
+    padding: 0 4px;
+}
+
+.member-navigation > ul > li > a.basket.basket-full span.basket-goods {
+    display: block;
+}
+
+.member-navigation > ul > li > a.basket.basket-full {
+    color: #f9b233;
+}
+
+.member-navigation > ul a > span {
+    display: none;
+}
+
+.main-navigation > ul li:last-child {
+    position: relative;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 40px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 100%;
+    min-width: 290px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    z-index: 2;
+    box-sizing: border-box;
+}
+
+.dropdown-menu.is-active {
+    display: block;
+
+}
+
+.dropdown-wrapper {
+    position: relative;
+    min-width: 290px;
+    background-color: #fff9ee;
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 5px;
+}
+
+.dropdown-menu:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translate(-50%, 0) rotate(45deg);
+    height: 20px;
+    width: 20px;
+    background-color: #fff9ee;
+}
+
+.dropdown-items > ul > li > a {
+    display: block;
+    position: relative;
+    color: #51296f;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.dropdown-items > ul > li > a:hover {
+    color: #b42f7d;
+}
+
+.dropdown-input {
+    border-top: 1px solid #c3bacb;
+    border-left: 1px solid #c3bacb;
+    margin-top: 5px;
+    margin-bottom: 20px;
+}
+
+/*.dropdown-input input::-moz-placeholder {*/
+    /*color: #333333;*/
+/*}*/
+
+.social-navigation a > span {
+    display: none;
+}
+
+.social-navigation > ul li {
+    display: inline-block;
+}
+
+.social-navigation a {
+    display: block;
+    width: 25px;
+    height: 25px;
+    margin-right: 10px;
+    border-radius: 50%;
+    border: 1px solid transparent;
+    background-image: url("../img/social-icons.png");
+    background-repeat: no-repeat;
+}
+
+.social-navigation a:hover {
+    border: 1px solid #b42f7d;
+}
+
+.social-navigation a.facebook {
+    background-position: -42px 0;
+}
+.social-navigation a.google {
+    background-position: -84px 0;
+}
+.social-navigation a.linkedin {
+    background-position: -128px 0;
+}
+.social-navigation a.mail {
+    background-position: -170px 0;
+}
+.social-navigation a.rss {
+    background-position: -212px 0;
+}
