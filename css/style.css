@@ -59,9 +59,7 @@ input:focus, button:focus {
 }
 
 .header-top {
-    /*display: table;*/
     position: relative;
-    /*width: 100%;*/
     margin-bottom: 15px;
 }
 
@@ -316,10 +314,6 @@ input:focus, button:focus {
     margin-bottom: 20px;
     width: 100%;
 }
-
-/*.dropdown-input input::-moz-placeholder {*/
-/*color: #333333;*/
-/*}*/
 
 .social-navigation a > span {
     display: none;
